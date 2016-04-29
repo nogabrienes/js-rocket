@@ -1,3 +1,25 @@
+//Hey this is a comment
+/*
+This is anothe long comment
+very long
+*/
+
+var doCoolStuff = function(){
+	var currentClassName = 
+		document.getElementById('cool').className;
+
+	if (currentClassName == 'cool'){
+		document.getElementById('cool').className = 
+			'cool red';
+	}
+	else{
+		//Changing class name
+		document.getElementById('cool').className = 'cool';
+	}
+}
+
+
+
 var sayMyName = function(name){
 	alert('My name is ' + name);
 }
