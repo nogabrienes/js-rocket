@@ -1,3 +1,6 @@
+body{
+	font-family: 'helvetica', 'arial', 'sans-serif';
+}
 .left{
 	background-color: aquamarine;
 	position: fixed;
@@ -5,6 +8,26 @@
 	height: 100%;
 	top: 0;
 	left: 0;		
+}
+
+.interface{
+	text-align: center;
+	padding: 20px;
+}
+
+a.button{
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-decoration: none;
+	border-radius: 10px;
+	text-transform: uppercase;
+	transition: color 300ms;
+}
+
+a:hover{
+	color: red;
 }
 
 .right{
@@ -17,27 +40,83 @@
 }
 
 .ground{
-	background-color: green;
+	background: url('../img/grass.png') no-repeat center center;
 	position: absolute;
-	bottom: 0;
+	bottom: -55px;
 	left: 0;
-	width: 100%;
-	height: 20px;
+	width: 1024px;
+	height: 300px;
+}
+
+.nervous{
+	background: url('../img/nervous.gif') no-repeat 0 0;
+	position: absolute;
+	bottom: 230px;
+	left: -100px;
+	width: 263px;
+	height: 96px;
+	display: none;
+}
+
+.nervous.show{
+	display: block;
+}
+
+.cant-wait{
+	background: url('../img/cant-wait.jpeg') no-repeat 0 0;
+	position: absolute;
+	bottom: 230px;
+    right: -17px;
+    width: 266px;
+    height: 116px;
+	display: none;
+}
+
+.cant-wait.show{
+	display: block;
 }
 
 .rocket{
 	position: absolute;
 	left: 50%;
-	bottom: 20px;
-	width: 143px;
-	height: 272px;
-	background-color: blue;
+	bottom: 11px;
+	width: 128px;
+	height: 199px;
+	margin-left: -64px;
+	background: url('../img/rocket-state1.png') no-repeat 0 0;
 	transition: bottom 10000ms;
+}
+
+/* rocket bg image */
+
+body.body-state2 .rocket{
+	background-image: url('../img/rocket-state2.png');
+	bottom: 11px;
+	width: 152px;
+	height: 288px;
+	margin-left: -76px;
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background-image: url('../img/rocket-state3.jpg');
+	width: 225px;
+	height: 255px;
+	margin-left: -112.5px;
+}
+
+body.body-state5 .rocket{
+	background-image: url('../img/boom.jpg');
+	width: 279px;
+	height: 180px;
+	margin-left: -104.5px;
 }
 
 body.body-state1 .rocket{
 	transition: none;
 }
+
+
 
 body.body-state3 .rocket,
 body.body-state4 .rocket{

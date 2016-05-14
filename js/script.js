@@ -1,3 +1,8 @@
+setTimeout(function(){
+	location.href = 'rocket.html';
+}, 2000);
+
+
 //Hey this is a comment
 /*
 This is anothe long comment
